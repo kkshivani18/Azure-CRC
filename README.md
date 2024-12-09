@@ -1,2 +1,2 @@
-# Azure-CRC
-Azure-CRC is Cloud Resume Challenge in Azure. 
+# Azure-Expense-Tracker
+
