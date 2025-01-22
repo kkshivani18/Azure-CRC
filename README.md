@@ -1,7 +1,8 @@
 # Azure-Expense-Tracker
 
 ## Overview
-    The Azure Expense Tracker is a cloud-based web application designed to help users track their expenses. The project replicates the concepts and learning goals of a cloud-centric challenge by integrating a scalable frontend, serverless backend, and a cloud database.
+- The Azure Expense Tracker is a cloud-based web application designed to help users track their expenses. 
+- The project replicates the concepts and learning goals of a cloud-centric challenge by integrating a scalable frontend, serverless backend, and a cloud database.
 
 ## Project Structure
 - Frontend:
@@ -51,8 +52,8 @@
     - Define Terraform Variables: Define variables in a variables.tf file for reusability and flexibility. 
     - Create CosmosDB Account: Configure CosmosDB with the NoSQL API and include the following.
     - Deploying the CosmosDB Resource
-        - Initialize Terraform: Run *terraform init* to download the necessary provider plugins.
-        - Plan the Deployment: Execute *terraform plan* to preview the changes Terraform will apply to your Azure subscription.        
+        - Initialize Terraform: Run `terraform init` to download the necessary provider plugins.
+        - Plan the Deployment: Execute `terraform plan` to preview the changes Terraform will apply to your Azure subscription.        
         - Apply the Configuration: Use *terraform apply* to create the CosmosDB instance. Confirm the action when prompted.
 
         ![Deployment of Azure CosmosDB with Terraform](<./images/terraform apply.png>)
