@@ -54,7 +54,7 @@
     - Deploying the CosmosDB Resource
         - Initialize Terraform: Run `terraform init` to download the necessary provider plugins.
         - Plan the Deployment: Execute `terraform plan` to preview the changes Terraform will apply to your Azure subscription.        
-        - Apply the Configuration: Use *terraform apply* to create the CosmosDB instance. Confirm the action when prompted.
+        - Apply the Configuration: Use `terraform apply` to create the CosmosDB instance. Confirm the action when prompted.
 
         ![Deployment of Azure CosmosDB with Terraform](<./images/terraform apply.png>)
 
