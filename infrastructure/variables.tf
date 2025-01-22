@@ -29,5 +29,5 @@ variable "expense_tracker_storage_name" {
 }
 
 variable "expense_tracker_static_name" {
-  default = "expense-tracker-static-web"
+  default = "expense-tracker-static-web-app"
 }
