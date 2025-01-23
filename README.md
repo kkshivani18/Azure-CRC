@@ -40,9 +40,9 @@
 
 ## Steps
 
-- Step 1 - **Frontend Development**
-    - Developed a static website with React and Chart.js (for Doughnut Chart). 
-    - Features include:
+### Step 1 - **Frontend Development**
+- Developed a static website with React and Chart.js (for Doughnut Chart). 
+- Features include:
         - Displays Balance amount, Income and Expenses.
         - Visualizes the income and expenses in the form of Doughnut Chart. 
         - Displays the Previous Transactions. 
@@ -51,31 +51,31 @@
     
     ![expense tracker](<./images/website.png>)
 
-- Step 2 - **Creating Azure CosmosDB with Terraform**
-    - Automated the creation of an Azure CosmosDB instance using Infrastructure as Code (IaC) with Terraform. 
-    - Install Terraform.
-    - Authenticate Terraform with Azure using az login or a Service Principal.
-    - Create a working directory for Terraform files.
-    - Define Terraform variables: Define variables in a variables.tf file for reusability and flexibility. 
-    - Create CosmosDB Account: Configure CosmosDB with the NoSQL API and include the following.
-    - Deploying the CosmosDB Resource
-        - Initialize Terraform: Run `terraform init` to download the necessary provider plugins.
-        - Plan the Deployment: Execute `terraform plan` to preview the changes Terraform will apply to your Azure subscription.        
-        - Apply the Configuration: Use `terraform apply` to create the CosmosDB instance. Confirm the action when prompted.
+### Step 2 - **Creating Azure CosmosDB with Terraform**
+- Automated the creation of an Azure CosmosDB instance using Infrastructure as Code (IaC) with Terraform. 
+- Install Terraform.
+- Authenticate Terraform with Azure using az login or a Service Principal.
+- Create a working directory for Terraform files.
+- Define Terraform variables: Define variables in a variables.tf file for reusability and flexibility. 
+- Create CosmosDB Account: Configure CosmosDB with the NoSQL API and include the following.
+- Deploying the CosmosDB Resource
+    - Initialize Terraform: Run `terraform init` to download the necessary provider plugins.
+    - Plan the Deployment: Execute `terraform plan` to preview the changes Terraform will apply to your Azure subscription.        
+    - Apply the Configuration: Use `terraform apply` to create the CosmosDB instance. Confirm the action when prompted.
 
         ![Deployment of Azure CosmosDB with Terraform](<./images/terraform apply.png>)
 
-    - Verify Deployment:
-        - Go to the Azure portal.
-        - Navigate to the expense-tracker resource group.
-        - Check for the CosmosDB account (expense-tracker-db).
+- Verify Deployment:
+    - Go to the Azure portal.
+    - Navigate to the expense-tracker resource group.
+    - Check for the CosmosDB account (expense-tracker-db).
 
         ![After Deployment of CosmosDB on Azure](<./images/cosmosdb creation.png>)
 
-        *Note*
-        - Troubleshooting - For cosmosdb creation. Tried to do with terraform. The issue appears to be regional issue. 
+    *Note*
+    - Troubleshooting - For cosmosdb creation. Tried to do with terraform. The issue appears to be regional issue. 
         ![Deployment issue with cosmosdb with terraform](<./images/cosmosdb_deployment_error.png>)
-        - Solution: Tried it again and again and it worked.
+    - Solution: Tried it again and again and it worked.
 
 
 ### Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
