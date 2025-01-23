@@ -22,35 +22,41 @@
     - Azure Cosmos DB for scalable and flexible storage.
     - Stores expense records with fields such as description and amount.
 
+- IaC:
+    - Using Terraform, I was able to automate the provisioning of Azure resources like Azure Functions, Cosmos DB, Service Plan, Storage Account and Static Web App. 
+    - It is particularly useful for structuring the configurations for Azure resources and other cloud providers with Terraform. 
+
 - Deployment:
     - CI/CD pipeline set up using GitHub Actions.
-    - Automates building, testing, and deploying the frontend and backend.
+    - Automates building, testing and deploying the frontend and backend.
 
 
 - Technologies Used:
     - Frontend: React, CSS, Chart.js
     - Backend: Azure Functions (Node.js)
     - Database: Azure Cosmos DB
+    - IaC: Terraform 
     - CI/CD: GitHub Actions
 
 ## Steps
 
-- Step 1 - **Frontend Development**
+### Step 1 - **Frontend Development**
     - Developed a static website with React and Chart.js (for Doughnut Chart). 
     - Features include:
         - Displays Balance amount, Income and Expenses.
         - Visualizes the income and expenses in the form of Doughnut Chart. 
         - Displays the Previous Transactions. 
         - Adds a new Transaction. 
+        - Deletion of a Transaction. 
     
     ![expense tracker](<./images/website.png>)
 
-- Step 2 - **Creating Azure CosmosDB with Terraform**
-    - Automate the creation of an Azure CosmosDB instance using Infrastructure as Code (IaC) with Terraform. 
+### Step 2 - **Creating Azure CosmosDB with Terraform**
+    - Automated the creation of an Azure CosmosDB instance using Infrastructure as Code (IaC) with Terraform. 
     - Install Terraform.
     - Authenticate Terraform with Azure using az login or a Service Principal.
     - Create a working directory for Terraform files.
-    - Define Terraform Variables: Define variables in a variables.tf file for reusability and flexibility. 
+    - Define Terraform variables: Define variables in a variables.tf file for reusability and flexibility. 
     - Create CosmosDB Account: Configure CosmosDB with the NoSQL API and include the following.
     - Deploying the CosmosDB Resource
         - Initialize Terraform: Run `terraform init` to download the necessary provider plugins.
@@ -66,7 +72,12 @@
 
         ![After Deployment of CosmosDB on Azure](<./images/cosmosdb creation.png>)
 
-- Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
+        *Note*
+        - Troubleshooting - For cosmosdb creation. Tried to do with terraform. The issue appears to be regional issue. 
+        ![Deployment issue with cosmosdb with terraform](<./images/cosmosdb_deployment_error.png>)
+
+
+### Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
     - Implement Azure Functions to enable transactions to be added and deleted from CosmosDB. The functions will act as the bridge between the React frontend and the database.
 
 
