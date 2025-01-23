@@ -2,7 +2,7 @@
 
 ## Overview
 - The Azure Expense Tracker is a cloud-based web application designed to help users track their expenses. 
-- The project replicates the concepts and learning goals of a cloud-centric challenge by integrating a scalable frontend, serverless backend, and a cloud database.
+- The project replicates the concepts and learning goals of a cloud-centric challenge by integrating a scalable frontend, serverless backend and a cloud database.
 
 ## Project Structure
 - Frontend:
@@ -13,9 +13,10 @@
 - Backend:
     - Serverless architecture powered by Azure Functions.
     - Provides REST APIs for:
-        - Logging expenses.
-        - Retrieving categorized expense data.
-        - Generating insights for visualization.
+        - Getting expenses.
+        - Adding expense data.
+        - Deleting expense data. 
+        - Generating graph for visualization.
 
 - Database:
     - Azure Cosmos DB for scalable and flexible storage.
@@ -67,6 +68,7 @@
 
 - Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
     - Implement Azure Functions to enable transactions to be added and deleted from CosmosDB. The functions will act as the bridge between the React frontend and the database.
+
 
 
     
