@@ -78,8 +78,9 @@
         - Solution: Tried it again and again and it worked.
 
 
-- Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
-    - Implement Azure Functions to enable transactions to be added and deleted from CosmosDB. The functions will act as the bridge between the React frontend and the database.
+### Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
+    - Implemented Azure Functions to enable transactions to be add, delete and get transactions from CosmosDB. The functions will act as the bridge between the React frontend and the database.
+
 
 
 
