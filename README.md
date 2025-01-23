@@ -79,7 +79,7 @@
 
 
 ### Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
-    - Implemented Azure Functions to enable transactions to be add, delete and get transactions from CosmosDB. The functions will act as the bridge between the React frontend and the database.
+- Implemented Azure Functions to enable transactions to be add, delete and get transactions from CosmosDB. The functions will act as the bridge between the React frontend and the database.
 
 
 
