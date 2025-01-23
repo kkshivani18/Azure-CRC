@@ -40,7 +40,7 @@
 
 ## Steps
 
-### Step 1 - **Frontend Development**
+- Step 1 - **Frontend Development**
     - Developed a static website with React and Chart.js (for Doughnut Chart). 
     - Features include:
         - Displays Balance amount, Income and Expenses.
@@ -51,7 +51,7 @@
     
     ![expense tracker](<./images/website.png>)
 
-### Step 2 - **Creating Azure CosmosDB with Terraform**
+- Step 2 - **Creating Azure CosmosDB with Terraform**
     - Automated the creation of an Azure CosmosDB instance using Infrastructure as Code (IaC) with Terraform. 
     - Install Terraform.
     - Authenticate Terraform with Azure using az login or a Service Principal.
@@ -77,7 +77,7 @@
         ![Deployment issue with cosmosdb with terraform](<./images/cosmosdb_deployment_error.png>)
 
 
-### Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
+- Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
     - Implement Azure Functions to enable transactions to be added and deleted from CosmosDB. The functions will act as the bridge between the React frontend and the database.
 
 
