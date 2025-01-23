@@ -75,6 +75,7 @@
         *Note*
         - Troubleshooting - For cosmosdb creation. Tried to do with terraform. The issue appears to be regional issue. 
         ![Deployment issue with cosmosdb with terraform](<./images/cosmosdb_deployment_error.png>)
+        - Solution: Tried it again and again and it worked.
 
 
 - Step 3 - **Integrating Backend APIs via Azure Functions for Transaction Management in CosmosDB**
