@@ -32,7 +32,7 @@
 
 
 - Technologies Used:
-    - Frontend: React, CSS, Chart.js
+    - Frontend: React, tailwind CSS, Chart.js
     - Backend: Azure Functions (Node.js)
     - Database: Azure Cosmos DB
     - IaC: Terraform 
