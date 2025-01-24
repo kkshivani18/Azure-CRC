@@ -49,8 +49,7 @@ export function AddTransactions() {
         };
 
         try {
-            // const response = await axios.post("http://localhost:7071/api/AddExpense", newTransaction);
-            const response = await axios.post("https://expense-tracker-functions.azurewebsites.net/api/AddExpense", newTransaction);
+            const response = await axios.post("http://localhost:7071/api/AddExpense", newTransaction);
             console.log("API Response:", response.data);
             addTransaction(response.data);
             setText("");

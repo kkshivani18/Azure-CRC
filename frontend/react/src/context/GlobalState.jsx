@@ -52,7 +52,7 @@ export const GlobalProvider = ( {children }) => {
   useEffect (() => {
     const fetchTransactions = async () => {
       try {
-        const response = await axios.get("https://expense-tracker-functions.azurewebsites.net/api/GetExpenses");
+        const response = await axios.get("http://localhost:7071/api/GetExpenses");
         dispatch({ type: 'GET_TRANSACTIONS', payload: response.data }); 
       } catch (error) { 
         dispatch({ type: 'TRANSACTION_ERROR', payload: error.message }); 
@@ -69,7 +69,7 @@ export const GlobalProvider = ( {children }) => {
 
     async function deleteTransaction(id) {
       try{
-        await axios.delete("https://expense-tracker-functions.azurewebsites.net/api/DeleteExpense", {
+        await axios.delete("http://localhost:7071/api/DeleteExpense", {
           data: { id }
         });
         dispatch({ type: "DELETE_TRANSACTION", payload: id });
