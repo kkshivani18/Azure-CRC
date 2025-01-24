@@ -132,27 +132,36 @@
 
     *Note*
     - Troubleshooting - While coding and integrating frontend and backend with CosmosDB, I faced certain issue. 
-    - CORS error solved by including the react application localhost in local.settings.json file.
-        - Used with the help of - [How to configure CORS in Azure function app? - Stack Overflow](https://stackoverflow.com/questions/70265255/how-to-configure-cors-in-azure-function-app).  
+        - CORS error solved by including the react application localhost in local.settings.json file.
+            - Used with the help of - [How to configure CORS in Azure function app? - Stack Overflow](https://stackoverflow.com/questions/70265255/how-to-configure-cors-in-azure-function-app).  
         - Some unauthorized key issue - [troubleshoot-unauthorized](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/troubleshoot-unauthorized). I just added the primary key instead of the primary connection string.   
         - [node.js - Decoding the response body from azure functions - Stack Overflow](https://stackoverflow.com/questions/39842944/decoding-the-response-body-from-azure-functions).  
 
-- Integrate, frontend and backend APIs using axios in react for fetching transactions. Also code and deploy Azure Functions, Azure Storage account, Azure Service plan using Terraform.  
+- Integrate, frontend and backend APIs using axios in react for fetching transactions. 
+
+### Step 4 - **Deploying Backend APIs on Azure Functions** 
+- Code and deploy Azure Functions, Azure Storage account, Azure Service plan using Terraform.  
 
     *Note*
-    - Troubleshooting - While deploying Azure functions on Azure, I faced certain issues.     
+    - Troubleshooting - While deploying Azure functions on Azure, I faced certain issues.  
+
     ![func worker runtime error](<./images/funcs error runtime.png>)  
+
     ![func runtime not updated](<./images/func runtime not updated.png>)  
+
     ```bash
 	az functionapp config appsettings set --resource-group expense-tracker --name expense-tracker-functions --settings FUNCTIONS_WORKER_RUNTIME=node
     ```  
+
     - To verify the WORKER_RUNTIME is updated, restart it
     ```bash
 	az functionapp restart --resource-group expense-tracker --name expense-tracker-functions
     ```  
+
     ```bash
     az functionapp config appsettings list --resource-group expense-tracker --name expense-tracker-functions
-    ```
+    ```  
+
     ![func runtime updated](<./images/func runtime updated.png>)  
 
     - Deploying Azure Functions via Azure CLI  
