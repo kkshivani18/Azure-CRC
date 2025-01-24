@@ -92,6 +92,28 @@
         ```bash
         func new
         ```
+        ![func new](<./images/func new.png>)  
+
+        ![HTTP Trigger](<./images/http trigger.png>)
+
+    **AddExpense API**
+    ![Add Expense](<./images/AddTransaction.png>)  
+
+    ![AddTransaction localhost API](<./images/AddTransaction localhost API.png>)
+
+    **GetExpenses**  
+    ![GetExpense](<./images/GetExpense.png>)
+
+    **DeleteExpense**  
+    ![DeleteExpense Icon](<./images/DeleteExpense Icon.png>)  
+
+    ![DeleteExpense CosmosDB](<./images/DeleteExpense CosmosDB.png>)
+
+    **Deleting the particular transaction**
+    ![DeleteExpense](<./images/DeleteExpense.png>)  
+
+    ![After using DeleteExpense](<./images/after using DeleteExpense.png>)  
+
 - Use the already created CosmosDB in Azure, add environment variables like COSMOS_DB_CONNECTION_STRING to `local.settings.json`. 
 - Code the backend APIs with Azure functions and deploy it logging in to Azure CLI. 
     ```bash
@@ -105,4 +127,7 @@
     ```bash
     func start 
     ```
-- Implemented Azure Functions to enable transactions to add, delete and get transactions from CosmosDB. The functions will act as the bridge between the React frontend and the database.
+    ![Backend API integration with CosmosDB](<./images/backend int with cosmosdb.png>)
+
+- Integrate, frontend and backend APIs using axios in react. Also code and deploy Azure Functions, Azure Storage account, Azure Service plan on Azure.  
+- Implement Azure Functions to enable transactions to add, delete and get transactions from CosmosDB. The functions will act as the bridge between the React frontend and the database.
