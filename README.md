@@ -82,19 +82,27 @@
 - Set Up Azure Functions Project
     - Install Azure Functions Tools
         ```bash
-            npm install -g azure-functions-core-tools@4 --unsafe-perm true
+        npm install -g azure-functions-core-tools@4 --unsafe-perm true
         ```
     - Create a new Azure Functions Project and initialise it
         ```bash
-            func init --worker-runtime node
+        func init --worker-runtime node
         ```    
     - Add HTTP Trigger Functions
         ```bash
-            func new
+        func new
         ```
 - Use the already created CosmosDB in Azure, add environment variables like COSMOS_DB_CONNECTION_STRING to `local.settings.json`. 
 - Code the backend APIs with Azure functions and deploy it logging in to Azure CLI. 
     ```bash
-        az login
+    az login
+    ```
+    - For deploying Azure functions from local to Azure
+    ```bash
+    func azure functionapp publish <FunctionAppName>
+    ```
+    - To test the functions locally, use the below command. Else you can use Postman for testing the APIs. 
+    ```bash
+    func start 
     ```
 - Implemented Azure Functions to enable transactions to add, delete and get transactions from CosmosDB. The functions will act as the bridge between the React frontend and the database.
