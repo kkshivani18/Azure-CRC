@@ -43,11 +43,11 @@
 ### Step 1 - **Frontend Development**
 - Developed a static website with React and Chart.js (for Doughnut Chart). 
 - Features include:
-        - Displays Balance amount, Income and Expenses.
-        - Visualizes the income and expenses in the form of Doughnut Chart. 
-        - Displays the Previous Transactions. 
-        - Adds a new Transaction. 
-        - Deletion of a Transaction. 
+    - Displays Balance amount, Income and Expenses.
+    - Visualizes the income and expenses in the form of Doughnut Chart. 
+    - Displays the Previous Transactions. 
+    - Adds a new Transaction. 
+    - Deletion of a Transaction. 
     
     ![expense tracker](<./images/website.png>)  
 
