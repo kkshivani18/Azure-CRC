@@ -210,8 +210,12 @@
     ![terraform state list](<./images/terraform state list.png>)
 
     - Creating Static Web App with Azure UI. It can also be linked with your Github account, if you select the Github option. It will directly create a .yaml file for Github Actions. 
+ 
+    ![static web app creation ui 1](<./images/static web app creation ui 1.png>)  
 
-    ![static web app ui](<./video/static web app.mp4>)  
+    ![static web app creation ui 2](<./images/static web app creation ui 2.png>)  
+
+    ![static web app creation ui 3](<./images/static web app creation ui 3.png>)  
 
 - Now, select the URL present on the Azure Static Web App Overview page. To view the website in the browser, the URL will direct you to the Static website that is hosted.  
 
