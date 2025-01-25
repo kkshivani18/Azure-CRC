@@ -4,6 +4,8 @@
 - The Azure Expense Tracker is a cloud-based web application designed to help users track their expenses. 
 - The project replicates the concepts and learning goals of a cloud-centric challenge by integrating a scalable frontend, serverless backend and a cloud database.
 
+![project architecture](<./images/project architecture.png>)  
+
 ## Project Structure
 - Frontend:
     - Built with React for creating a responsive user interface.
