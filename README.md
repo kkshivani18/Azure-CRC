@@ -173,3 +173,62 @@
     ![FUNCTIONS_WORKER_RUNTIME succesfully updated http trigger](<./images/az funcs runtime updated 2.png>)
 
 - Implement Azure Functions to enable transactions to add, delete and get transactions from CosmosDB. The functions will act as the bridge between the React frontend and the database.
+
+### Step 5 - **Using Azure Static Web Apps to deploy your frontend**
+
+- To deploy your React frontend to the Azure Static Website you've to build your React App. Ensure your React app is production-ready:
+    - Navigate to your React project directory:
+    ```bash
+    cd /path/to/your/react-app
+    ```
+    - Run the build command to create the optimized production build:
+    ```bash
+    npm run build
+    ```
+    - It creates a dist directory with all the necessary files.  
+ 
+    ![npm run build](<./images/npm run build.png>)  
+
+- Upload Files to Azure Storage
+    - Since we're using Azure Static Website hosting, you need to upload the React build files to the $web container in the Azure Storage account.
+    - $web is present only when static website in storage account is enabled. 
+
+    ![str account static website](<./images/str account static website.png>)  
+
+    - Changing the access level of web container
+    ![str account web storage](<./images/str account web storage.png>)  
+
+    - After uploading files in expense-tracker, it was displaying the static website. Note that, this isn't the Static Web App, it is static website in storage account, displaying the frontend.   
+
+    ![str website](<./images/str website.png>)  
+
+- Now, we have to create Static Web App either with Terraform or with Azure UI. 
+    - Creating Static Web App with Terraform is easy but I was facing a stubborn error with sku_tier and sku_size set to“Free”, both should be set to “Standard”.  
+
+    ![static web app terraform](<./images/static web app terraform.png>)  
+
+    ![terraform state list](<./images/terraform state list.png>)
+
+    - Creating Static Web App with Azure UI. It can also be linked with your Github account, if you select the Github option. It will directly create a .yaml file for Github Actions. 
+
+    ![static web app ui](<./images/video/static web app.mp4>)  
+
+- Now, select the URL present on the Azure Static Web App Overview page. To view the website in the browser, the URL will direct you to the Static website that is hosted.  
+
+    ![static web app website](<./images/static web app website.png>)
+
+### Step 6 - **Using Github Actions for CI/CD**  
+
+- Github Actions automatically builds and tests your frontend (React) and backend (Azure Functions) on code push, and seamlessly deploys the React app to Azure Static Web Apps and the backend to Azure Function App after successful builds.
+- During the creation of Static Web App, it was linked with Github, that lead to automatic creation of .yaml file. 
+- The .yaml file isn't fully created, you'll have to add the azure_static_web_apps_api_token as secret in Github in settings, in Secrets & Variables folder. 
+- Also include:
+    - app_location: "./frontend/react" (for frontend files)
+    - api_location: "./backend/src/functions" (for backend files)
+    - output_location: "dist" (dist directory that was previously built)
+- Code and add changes to the .yaml file.  
+
+    ![github actions](<./images/github actions.png>)  
+
+    ![GA Details](<./images/GA Details.png>)
+
