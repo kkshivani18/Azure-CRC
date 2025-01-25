@@ -220,7 +220,7 @@
 ### Step 6 - **Using Github Actions for CI/CD**  
 
 - Github Actions automatically builds and tests your frontend (React) and backend (Azure Functions) on code push, and seamlessly deploys the React app to Azure Static Web Apps and the backend to Azure Function App after successful builds.
-- For learning about Github Actions, you can refer - [Learn to Use GitHub Actions: a Step-by-Step Guide](https://www.freecodecamp.org/news/learn-to-use-github-actions-step-by-step-guide/).
+- For learning about Github Actions, you can refer - [Learn to Use GitHub Actions: a Step-by-Step Guide](https://www.freecodecamp.org/news/learn-to-use-github-actions-step-by-step-guide/).  
 - During the creation of Static Web App, it was linked with Github, that lead to automatic creation of .yaml file. 
 - The .yaml file isn't fully created, you'll have to add the azure_static_web_apps_api_token as secret in Github in settings, in Secrets & Variables folder. 
 - Also include:
