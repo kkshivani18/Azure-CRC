@@ -178,7 +178,8 @@
 
     *Note*
     - Use Environment Variables for Sensitive Data (Used for the creation of Azure Functions and Azure Service plan via Terraform)
-        - Define sensitive data, such as client secrets and subscription IDs, as environment variables. Terraform can then read them securely without hardcoding them into the configuration files.
+        - Define sensitive data, such as client secrets and subscription IDs, as environment variables. 
+        - Terraform can then read them securely without hardcoding them into the configuration files.
             ```bash
             set TF_VAR_cosmos_db_connection_string=<cosmos_db_connection_string>
             ```
