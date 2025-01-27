@@ -176,6 +176,16 @@
 
 - Implement Azure Functions to enable transactions to add, delete and get transactions from CosmosDB. The functions will act as the bridge between the React frontend and the database.
 
+    *Note*
+    - Use Environment Variables for Sensitive Data (Used for the creation of Azure Functions and Azure Service plan via Terraform)
+        - Define sensitive data, such as client secrets and subscription IDs, as environment variables. Terraform can then read them securely without hardcoding them into the configuration files.
+            ```bash
+            set TF_VAR_cosmos_db_connection_string=<cosmos_db_connection_string>
+            ```
+            ```bash
+            echo %TF_VAR_cosmos_db_connection_string%
+            ```  
+
 ### Step 5 - **Using Azure Static Web Apps to deploy your frontend**
 
 - To deploy your React frontend to the Azure Static Website you've to build your React App. Ensure your React app is production-ready:
