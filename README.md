@@ -248,5 +248,7 @@
 
     ![github actions](<./images/github actions.png>)  
 
-    ![GA Details](<./images/GA Details.png>)
+    ![GA Details](<./images/GA Details.png>)  
 
+    ### License
+    [MIT License](https://github.com/kkshivani18/Azure-Expense-Tracker/blob/main/LICENSE)  
